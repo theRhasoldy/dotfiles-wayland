@@ -59,8 +59,9 @@ return {
 
 		builtin = {
 			find_files = {
-				find_command = { "rg", "--files" },
+				find_command = { "fd" },
 				hidden = true,
+				no_ignore = true,
 			},
 			diagnostics = {
 				theme = "ivy",

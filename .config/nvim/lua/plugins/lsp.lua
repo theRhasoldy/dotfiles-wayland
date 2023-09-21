@@ -115,9 +115,9 @@ return {
 				typescript = {
 					inlayHints = {
 						includeInlayParameterNameHints = "literal",
-						includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+						includeInlayParameterNameHintsWhenArgumentMatchesName = true,
 						includeInlayFunctionParameterTypeHints = true,
-						includeInlayVariableTypeHints = false,
+						includeInlayVariableTypeHints = true,
 						includeInlayPropertyDeclarationTypeHints = true,
 						includeInlayFunctionLikeReturnTypeHints = true,
 						includeInlayEnumMemberValueHints = true,
@@ -126,7 +126,7 @@ return {
 				javascript = {
 					inlayHints = {
 						includeInlayParameterNameHints = "all",
-						includeInlayParameterNameHintsWhenArgumentMatchesName = false,
+						includeInlayParameterNameHintsWhenArgumentMatchesName = true,
 						includeInlayFunctionParameterTypeHints = true,
 						includeInlayVariableTypeHints = true,
 						includeInlayPropertyDeclarationTypeHints = true,
