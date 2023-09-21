@@ -1,8 +1,10 @@
 return {
 	{
-		"kylechui/nvim-surround",
-		event = "VeryLazy",
-		opts = {},
+		"hrsh7th/nvim-insx",
+		event = { "BufReadPost", "BufNewFile" },
+		config = function()
+			require("insx.preset.standard").setup()
+		end,
 	},
 	{
 		"numToStr/Comment.nvim",

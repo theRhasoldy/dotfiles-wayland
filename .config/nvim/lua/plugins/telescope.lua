@@ -7,6 +7,7 @@ return {
 			config = function()
 				require("telescope").load_extension("fzf")
 				require("telescope").load_extension("refactoring")
+				require("telescope").load_extension("harpoon")
 			end,
 		},
 		"nvim-telescope/telescope-live-grep-args.nvim",
