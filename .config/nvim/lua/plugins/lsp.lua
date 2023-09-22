@@ -73,31 +73,33 @@ return {
 
       lsp["lua_ls"].setup({
         defaults,
-        inlay_hints = { enabled = true },
         single_file_support = true,
         settings = {
-          workspace = {
-            runtime = {
-              version = "luajit",
-              -- Setup your lua path
-              path = path,
+          Lua = {
+            hint = { enable = true },
+            workspace = {
+              runtime = {
+                version = "luajit",
+                -- Setup your lua path
+                path = path,
+              },
+              library = {
+                vim.api.nvim_get_runtime_file("", true),
+              },
+              -- maxPreload = 2000,
+              -- preloadFileSize = 50000,
+              checkThirdParty = true,
             },
-            library = {
-              vim.api.nvim_get_runtime_file("", true),
+            completion = {
+              workspaceWord = true,
+              callSnippet = "Replace",
             },
-            -- maxPreload = 2000,
-            -- preloadFileSize = 50000,
-            checkThirdParty = true,
-          },
-          completion = {
-            workspaceWord = true,
-            callSnippet = "Replace",
-          },
-          format = {
-            enable = false,
-          },
-          telemetry = {
-            enable = false,
+            format = {
+              enable = false,
+            },
+            telemetry = {
+              enable = false,
+            },
           },
         },
       })
@@ -112,26 +114,29 @@ return {
 
       lsp["tsserver"].setup({
         defaults,
-        typescript = {
-          inlayHints = {
-            includeInlayParameterNameHints = "literal",
-            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-            includeInlayFunctionParameterTypeHints = true,
-            includeInlayVariableTypeHints = true,
-            includeInlayPropertyDeclarationTypeHints = true,
-            includeInlayFunctionLikeReturnTypeHints = true,
-            includeInlayEnumMemberValueHints = true,
+        disable_formatting = true,
+        settings = {
+          typescript = {
+            inlayHints = {
+              includeInlayEnumMemberValueHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayVariableTypeHints = true,
+            },
           },
-        },
-        javascript = {
-          inlayHints = {
-            includeInlayParameterNameHints = "all",
-            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-            includeInlayFunctionParameterTypeHints = true,
-            includeInlayVariableTypeHints = true,
-            includeInlayPropertyDeclarationTypeHints = true,
-            includeInlayFunctionLikeReturnTypeHints = true,
-            includeInlayEnumMemberValueHints = true,
+          javascript = {
+            inlayHints = {
+              includeInlayEnumMemberValueHints = true,
+              includeInlayFunctionLikeReturnTypeHints = true,
+              includeInlayFunctionParameterTypeHints = true,
+              includeInlayParameterNameHints = "all",
+              includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+              includeInlayPropertyDeclarationTypeHints = true,
+              includeInlayVariableTypeHints = true,
+            },
           },
         },
       })
@@ -175,6 +180,14 @@ return {
       })
     end,
     keys = {
+      {
+        mode = "n",
+        "gh",
+        function()
+          vim.lsp.inlay_hint(0, nil)
+        end,
+        desc = "Toggle inlay hints",
+      },
       {
         mode = "n",
         "<Leader><Leader>",
