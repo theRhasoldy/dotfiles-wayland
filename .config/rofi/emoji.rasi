@@ -1,0 +1,17 @@
+@theme "~/.config/rofi/config.rasi"
+
+listview {
+	lines:      3;
+	columns:    6;
+
+	fixed-height:   false;
+	border-color:   @bg1;
+}
+
+element {
+	background-color:   transparent;
+}
+
+element-icon {
+	padding: -10px;
+}
