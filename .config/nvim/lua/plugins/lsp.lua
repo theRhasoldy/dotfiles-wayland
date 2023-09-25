@@ -115,7 +115,7 @@ return {
       lsp["tsserver"].setup({
         defaults,
         disable_formatting = true,
-        settings = {
+        --[[ settings = {
           typescript = {
             inlayHints = {
               includeInlayEnumMemberValueHints = true,
@@ -138,7 +138,7 @@ return {
               includeInlayVariableTypeHints = true,
             },
           },
-        },
+        }, ]]
       })
 
       lsp["astro"].setup({

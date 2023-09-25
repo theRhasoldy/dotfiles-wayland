@@ -27,7 +27,7 @@ opt.showmode = false
 opt.tabstop = 2
 opt.softtabstop = 2
 opt.shiftwidth = 2
-opt.expandtab = true -- Tabs not spaces!
+opt.expandtab = true
 opt.shiftround = true
 
 opt.smartindent = true
