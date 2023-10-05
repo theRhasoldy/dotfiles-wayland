@@ -1,0 +1,20 @@
+@theme "~/.config/rofi/config.rasi"
+
+configuration {
+  timeout {
+    action: "kb-cancel";
+    delay:  100;
+  }
+}
+
+listview {
+	lines:      1;
+	columns:    6;
+
+	fixed-height:   false;
+	border-color:   @bg1;
+}
+
+element {
+	background-color:   transparent;
+}
