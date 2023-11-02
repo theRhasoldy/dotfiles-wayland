@@ -1,0 +1,86 @@
+{
+  "layer": "top", // Waybar at top layer
+  "position": "top", // Waybar position (top|bottom|left|right)
+  "modules-left": ["hyprland/language"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": [
+    "memory",
+    "pulseaudio",
+    "network",
+    "battery",
+    "temperature",
+    "backlight",
+    "clock"
+  ],
+  // Modules configuration
+  "hyprland/language": {
+    "format": "{short}"
+  },
+  "hyprland/workspaces": {
+    "active-only": true
+  },
+  "clock": {
+    "format": "󱑁  {:%H:%M}",
+    // "timezone": "America/New_York",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "󰃮  {:%Y-%m-%d}"
+  },
+  "memory": {
+    "format": "󰎓  {used}GB | {total}GB"
+  },
+  "temperature": {
+    "thermal-zone": 2,
+    "hwmon-path": "/sys/class/thermal/thermal_zone2/temp",
+    "critical-threshold": 80,
+    "format-critical": "{icon}  {temperatureC} 󰔄",
+    "format": "{icon} {temperatureC} 󰔄",
+    "format-icons": ["󱃃 ", "󰸁 ", "󰔐 "]
+  },
+  "backlight": {
+    // "device": "acpi_video1",
+    "format": "{icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+  "battery": {
+    "states": {
+      "good": 80,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}",
+    "format-charging": "󰚥  {capacity}",
+    "format-plugged": "󰚥  {capacity}",
+    "format-alt": "{icon}  {time}",
+    // "format-good": "", // An empty format will hide the module
+    // "format-full": "",
+    "format-icons": ["󰂎", "󰁼", "󰁿", "󰂂", "󰁹"]
+  },
+  "network": {
+    // "interface": "wlp2*", // (Optional) To force the use of this interface
+    "format-wifi": "󰤨  {signalStrength}",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "󰤮  Disconnected",
+    "format-alt": "󰑩  {essid}"
+  },
+  "pulseaudio": {
+    "scroll-step": 5, // %, can be a float
+    "format": "{format_source}  {icon}  {volume}",
+    "format-bluetooth": "{volume} {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": " ",
+    "format-source-muted": " ",
+    "format-icons": {
+      "headphone": " ",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", "󰕾"]
+    },
+    "on-click": "pavucontrol"
+  }
+}
