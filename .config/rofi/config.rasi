@@ -3,7 +3,7 @@ configuration {
 	display-window: "";
 	drun-display-format: "{icons} {name}";
 	font: "SF Pro Display 8";
-	modi: "drun,run,window,emoji";
+	modi: "drun,run";
 	show-icons: true;
 	kb-remove-to-eol: "";
 	kb-accept-entry: "Return";
@@ -25,9 +25,9 @@ configuration {
 		display-name: "";
 	}
 
-	emoji {
-		display-name: "󰱲";
-	}
+	// emoji {
+	// 	display-name: "󰱲";
+	// }
 }
 
 * {
@@ -37,7 +37,7 @@ configuration {
 	/* bg1:    #2C2A39CC; */
 	bg0:    #232323EE;
 	bg1:    #232323EE;
-	bg2:    #ffbdbf44;
+	bg2:    #31E2CC44;
 
 	fg0:    #e4e0f9;
 	fg1:    #e4e0f9;
@@ -56,8 +56,9 @@ window {
 	background-color:   @bg0;
 	location:       center;
 	width:          620;
-	/* border-radius:  20; */
-
+	border-radius:  12;
+	border-color: #D695E8cc;
+  border: 2px;
 }
 
 inputbar {
