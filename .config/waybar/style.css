@@ -147,20 +147,21 @@ button:hover {
 
 #battery.charging,
 #battery.plugged {
-  color: #ffffff;
-  background-color: #12b9ac;
+  color: #12b9ac;
+  background-color: #232323;
 }
 
 @keyframes blink {
   to {
+    font-weight: 900;
     background-color: #ffffff;
     color: #000000;
   }
 }
 
 #battery.critical:not(.charging) {
-  background-color: #ef2386;
-  color: #ffffff;
+  background-color: #232323;
+  color: #ef2386;
   animation-name: blink;
   animation-duration: 2s;
   animation-timing-function: linear;
@@ -173,7 +174,7 @@ label:focus {
 }
 
 #network.disconnected {
-  background-color: #ef2386;
+  color: #ef2386;
 }
 
 #custom-media {

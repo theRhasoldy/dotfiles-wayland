@@ -18,8 +18,8 @@
   },
   "hyprland/workspaces": {
     "all-outputs": true,
-    "disable-scroll": true,
-    "active-only": true,
+    "disable-scroll": false,
+    "active-only": false,
     "format": "{icon}",
     "format-icons": {
       "1": "1 󰛞",
@@ -82,18 +82,18 @@
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "{format_source}  {icon}  {volume}",
-    "format-bluetooth": "{volume} {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-bluetooth": "{format_source}  {icon}  {volume}",
+    "format-bluetooth-muted": "{icon}  {volume}",
     "format-muted": " {format_source}",
     "format-source": " ",
     "format-source-muted": " ",
     "format-icons": {
       "headphone": " ",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
+      "hands-free": " ",
+      "headset": " ",
+      "phone": " ",
+      "portable": " ",
+      "car": " ",
       "default": ["", "", "󰕾"]
     },
     "on-click": "pavucontrol"
