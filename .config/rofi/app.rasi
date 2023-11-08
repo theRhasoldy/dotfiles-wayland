@@ -3,7 +3,5 @@
 listview {
 	lines:      3;
 	columns:    1;
-
-	fixed-height:   false;
 	border-color:   @bg1;
 }
