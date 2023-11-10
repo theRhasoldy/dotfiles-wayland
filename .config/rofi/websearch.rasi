@@ -10,9 +10,7 @@ configuration {
 listview {
 	lines:      1;
 	columns:    6;
-
-	fixed-height:   false;
-	border-color:   @bg1;
+	fixed-height:   true;
 }
 
 element {
