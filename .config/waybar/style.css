@@ -56,14 +56,19 @@ button:hover {
   border-bottom: 3px solid #ffffff;
 }
 
+#language {
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+}
+
 #clock {
   padding: 0.5rem;
   padding-left: 1.25rem;
-  padding-right: 1.25rem;
   color: #fefefe;
   background-color: #232323;
   margin-left: 0.75rem;
-  border-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
 }
 
 #battery,
