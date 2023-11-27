@@ -56,11 +56,6 @@ button:hover {
   border-bottom: 3px solid #ffffff;
 }
 
-#language {
-  border-top-right-radius: 0.75rem;
-  border-bottom-right-radius: 0.75rem;
-}
-
 #clock {
   padding: 0.5rem;
   padding-left: 1.25rem;
@@ -102,7 +97,6 @@ button:hover {
 }
 
 #memory {
-  margin-left: 0.75rem;
   padding-left: 1.25rem;
   border-top-left-radius: 0.75rem;
   border-bottom-left-radius: 0.75rem;
@@ -129,6 +123,12 @@ button:hover {
   padding: 0.5rem;
   color: #fefefe;
   background-color: #232323;
+}
+
+#language {
+  border-top-right-radius: 0.75rem;
+  border-bottom-right-radius: 0.75rem;
+  padding-right: 1.25rem;
 }
 
 #tray.empty {
@@ -159,8 +159,7 @@ button:hover {
 @keyframes blink {
   to {
     font-weight: 900;
-    background-color: #ffffff;
-    color: #000000;
+    color: #ffffff;
   }
 }
 
