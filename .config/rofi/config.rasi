@@ -3,7 +3,7 @@ configuration {
 	display-window: "";
 	drun-display-format: "{icons} {name}";
 	font: "SF Pro Display 10";
-	modi: "drun,run";
+	modi: "drun,run,window";
 	show-icons: true;
 	kb-remove-to-eol: "";
 	kb-accept-entry: "Return";
@@ -35,8 +35,8 @@ configuration {
 
 	/* bg0:    #2C2A39CC; */
 	/* bg1:    #2C2A39CC; */
-	bg0:    #1a1a1a;
-	bg1:    #1a1a1a;
+	bg0:    #1a1a1aEE;
+	bg1:    #1a1a1aEE;
 	bg2:    #31E2CC44;
 
 	fg0:    #eeeeee;
