@@ -2,7 +2,7 @@ configuration {
 	display-drun: "";
 	display-window: "";
 	drun-display-format: "{icons} {name}";
-	font: "SF Pro Display 8";
+	font: "SF Pro Display 10";
 	modi: "drun,run";
 	show-icons: true;
 	kb-remove-to-eol: "";
@@ -31,16 +31,16 @@ configuration {
 }
 
 * {
-	font:   "SF Pro 10";
+	font: "SF Pro Display Medium 10";
 
 	/* bg0:    #2C2A39CC; */
 	/* bg1:    #2C2A39CC; */
-	bg0:    #232323EE;
-	bg1:    #232323EE;
+	bg0:    #1a1a1a;
+	bg1:    #1a1a1a;
 	bg2:    #31E2CC44;
 
-	fg0:    #e4e0f9;
-	fg1:    #e4e0f9;
+	fg0:    #eeeeee;
+	fg1:    #eeeeee;
 	fg2:    #e4e0f980;
 
 	background-color:   transparent;
@@ -62,7 +62,7 @@ window {
 }
 
 inputbar {
-	font:       "SF Pro Bold 16";
+	font:       "SF Pro Display Bold 16";
 	padding:    12px;
 	spacing:    12px;
 	children:   [ prompt, entry ];

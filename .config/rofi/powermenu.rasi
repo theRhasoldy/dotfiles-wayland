@@ -7,6 +7,7 @@ configuration {
 
 window {
   fullscreen: true;
+  background-color: #090909e6;
   width: 100%;
   height: 100%;
 	border-radius: 0;
@@ -25,7 +26,7 @@ element {
 }
 
 element selected normal, element selected active {
-  text-color: #ffbdbf;
+  text-color: #E253E1;
   background-color: transparent;
 }
 
